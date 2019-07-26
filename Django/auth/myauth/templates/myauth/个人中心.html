@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-hans">
+    <head>
+        <meta charset="utf-8">
+        <title>个人中心</title>
+    </head>
+    <body>
+            <h1>个人中心</h1>
+            <a href="{% url 'myauth:主页'%}">主页</a>
+            <a href="{% url 'myauth:编辑个人信息'%}">编辑个人信息</a>
+            <a href="{% url 'myauth:修改密码'%}">修改密码</a>
+            <a href="{% url 'myauth:注销'%}">注销</a>
+        <div>
+            <p><label>用户名:</label> {{用户.username}}</p>
+            <p><label>邮箱:</label> {{用户.email}}</p>
+            <p><label>昵称:</label> {{用户.普通会员表.昵称}}</p>
+            <p><label>生日:</label> {{用户.普通会员表.生日}}</p>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-hans">
+    <head>
+        <meta charset="utf-8">
+        <title>登陆界面</title>
+    </head>
+    <body>
+        <a href="{% url 'myauth:主页' %}">主页</a>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{错误}}
+            <label for="u1">用户名</label> <input id="u1" type="text" name="username" /><br /><br />
+            <label for="u2">密码</label> <input id="u2" type="password" name="password" /><br /><br />
+            {{登陆表单.验证码}}
+            {{登陆表单.errors.验证码}}
+            <button type="submit">登陆</button>
+        </form>
+    </body>
+
+</html>
